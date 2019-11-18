@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const BodyParser = require('body-parser');
-const Constant = require('./config/constant');
+// const Constant = require('./config/constant');
 const User = require('./routes/user');
 const Blogs = require('./routes/blogs');
 
