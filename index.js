@@ -13,14 +13,15 @@ const PORT = process.env.PORT || 3000;
 
 //     res.send("Hello i am working");
 // })
-app.use('/', (req, res, next) => {
-    res.send("<h1>You are connected</h1");
-})
 
 app.use(BodyParser.urlencoded({ extended: true }));
 app.use(BodyParser.json());
 app.use(User);
 app.use(Blogs);
+
+app.use('/', (req, res, next) => {
+    res.send("<h1>You are connected</h1");
+})
 
 app.use('*', (req, res) => {
 
